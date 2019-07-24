@@ -11,6 +11,43 @@ body {
   height: 100vh;
 }
 
+.design-label,
+.code-label {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  min-width: 220px;
+  background: #333;
+  border-radius: 5px;
+  padding: 0.85rem;
+  color: white;
+  font-size: 1em;
+  text-align: left;
+  opacity: 0.5;
+  -webkit-transition: 0.1s ease-in-out 0s;
+  transition: 0.1s ease-in-out 0s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.design-label:hover,
+.code-label:hover {
+  opacity: 1;
+  -webkit-transition: 0.1s ease-in-out 0s;
+  transition: 0.1s ease-in-out 0s;
+}
+
+.design-label a,
+.code-label a {
+  color: pink;
+}
+
+.code-label {
+  bottom: 6rem;
+}
+
 .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +162,10 @@ body {
 .wrapper .left .form .buttons button:first-child {
   background: #5497d3;
   color: white;
+}
+
+.wrapper .left .form .buttons button:focus {
+  outline: none;
 }
 
 .wrapper .left .form p {

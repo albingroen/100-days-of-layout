@@ -11,6 +11,35 @@ body {
   height: 100vh;
 }
 
+.design-label,
+.code-label {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  min-width: 220px;
+  background: #333;
+  border-radius: 5px;
+  padding: 0.85rem;
+  color: white;
+  font-size: 1em;
+  text-align: left;
+  opacity: 0.5;
+  transition: 0.1s ease-in-out 0s;
+  user-select: none;
+  &:hover {
+    opacity: 1;
+    transition: 0.1s ease-in-out 0s;
+  }
+
+  a {
+    color: pink;
+  }
+}
+
+.code-label {
+  bottom: 6rem;
+}
+
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -105,6 +134,9 @@ body {
           &:first-child {
             background: #5497d3;
             color: white;
+          }
+          &:focus {
+            outline: none;
           }
         }
       }
