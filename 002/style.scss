@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +7,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Work Sans", sans-serif;
   height: 100vh;
 }
 
@@ -27,20 +29,18 @@ body {
     }
 
     h1 {
-      font-weight: normal;
+      font-weight: 500;
       padding: 2rem 0;
       padding-top: 1.5rem;
       line-height: 130%;
-      letter-spacing: 0.5px;
       color: #585758;
     }
 
     h3 {
-      font-weight: normal;
+      font-weight: 500;
       padding-bottom: 0.75rem;
       color: #585758;
       font-size: 1.25em;
-      letter-spacing: 0.5px;
     }
 
     .form {
@@ -56,19 +56,33 @@ body {
           font-weight: 500;
         }
 
-        input {
-          display: block;
-          width: 100%;
-          border: 1px solid #e6e5e6;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 0.875em;
-          color: #686768;
-          font-weight: 500;
-          &:focus {
-            border-color: #9ab2c6;
-            outline: none;
-            color: #9ab2c6;
+        .input-icon-wrapper {
+          position: relative;
+
+          i {
+            position: absolute;
+            top: 50%;
+            left: 1rem;
+            transform: translateY(-50%);
+            font-size: 0.875em;
+            color: #b8b7b8;
+          }
+
+          input {
+            display: block;
+            width: 100%;
+            border: 1px solid #e6e5e6;
+            border-radius: 5px;
+            padding: 0.75rem;
+            padding-left: 2.5rem;
+            font-size: 0.875em;
+            color: #686768;
+            font-weight: 500;
+            &:focus {
+              border-color: #9ab2c6;
+              outline: none;
+              color: #9ab2c6;
+            }
           }
         }
       }

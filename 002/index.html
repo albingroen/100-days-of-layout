@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/82af46a315.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
   </head>
@@ -18,11 +19,21 @@
         <div class="form">
           <div class="input-wrapper">
             <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Enter username" />
+            <div class="input-icon-wrapper">
+              <i class="fas fa-user"></i>
+              <input type="text" id="username" placeholder="Enter username" />
+            </div>
           </div>
           <div class="input-wrapper">
             <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Enter password" />
+            <div class="input-icon-wrapper">
+              <i class="fas fa-key"></i>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+              />
+            </div>
           </div>
           <div class="buttons">
             <button>Log in</button>
