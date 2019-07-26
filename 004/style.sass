@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap")
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+body
+    font-family: "Josefin Sans", sans-serif
+    height: 100vh
+    color: #373737
+    font-weight: 400
+
+.design-label,
+.code-label
+    position: fixed
+    bottom: 2rem
+    right: 2rem
+    min-width: 220px
+    background: #333
+    border-radius: 5px
+    padding: 0.85rem
+    color: white
+    font-size: 1em
+    text-align: left
+    opacity: 0.5
+    transition: 0.1s ease-in-out 0s
+    user-select: none
+    z-index: 2
+
+    &:hover
+        opacity: 1
+        transition: 0.1s ease-in-out 0s
+
+    a
+        color: pink
+
+.code-label
+    bottom: 6rem
+
+.wrapper
+    display: flex
+    justify-content: space-between
+    height: 100%
+
+    .left
+        background-image: url("./assets/vertical-setup.jpg")
+        background-position: center
+        background-size: cover
+        height: 100%
+        width: 30%
+
+    .right
+        width: 70%
+        padding: 5rem
+        position: relative
+
+        nav
+            width: 100%
+            margin-top: -3rem
+            margin-bottom: 8rem
+            display: flex
+            justify-content: space-between
+
+            h3
+                text-transform: uppercase
+                cursor: pointer
+
+            .hamburger
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                justify-content: center
+                transition: 0.25s ease-in-out 0s
+                cursor: pointer
+
+                &:hover
+                    .line
+                        width: 35px !important
+                        transition: 0.25s ease-in-out 0s
+
+                .line
+                    transition: 0.25s ease-in-out 0s
+                    height: 2px
+                    width: 20px
+                    margin: 2.5px 0
+                    background: #111
+
+                    &:first-child
+                        width: 25px
+
+        h1
+            font-size: 6em
+            margin-bottom: 1rem
+            color: #000000
+            line-height: 115%
+            font-weight: 700
+
+        p
+            font-size: 1em
+            line-height: 170%
+            opacity: 0.7
+            max-width: 800px
+            font-weight: 500
+
+        button
+            background: #111111
+            color: white
+            text-transform: capitalize
+            font-size: 1em
+            padding: 1.25rem 2rem
+            border: none
+            margin-top: 2.5rem
+            letter-spacing: 0.5px
+            font-family: "Josefin Sans", sans-serif
+            cursor: pointer
+            border: 2px solid #111111
+            transition: 0.1s ease-in-out 0s
+
+            &:focus
+                outline: none
+
+            &:hover
+                border: 2px solid #111111
+                color: #111111
+                transition: 0.1s ease-in-out 0s
+                background: none
+
+            &:active
+                background: #111111
+                transition: 0.1s ease-in-out 0s
+                color: white
+
+        footer
+            background: #ffe9b0
+            position: absolute
+            bottom: 0
+            left: 0
+            width: calc(100% - 400px)
+            padding: 5rem
+            display: flex
+            justify-content: space-between
+
+            p
+                cursor: pointer
+
+            p:last-child
+                font-weight: 600
+
+            ul
+                display: flex
+
+                li
+                    list-style: none
+                    margin: 0 1.5rem
+                    opacity: 0.65
+                    cursor: pointer
+                    transition: 0.1s ease-in-out 0s
+
+                    &:hover
+                        opacity: 1
+                        transition: 0.1s ease-in-out 0s
+
+                    &:first-child
+                        font-weight: 600
+                        opacity: 1
+
+        .video-thumbnail
+            height: 300px
+            width: 400px
+            position: absolute
+            bottom: 0
+            right: 0
+            background-image: url("./assets/small-setup.jpg")
+            background-position: center
+            background-size: cover
+
+            .overlay
+                height: 100%
+                width: 100%
+                background: rgba(0, 0, 0, 0.55)
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .play-button-wrapper
+                    height: 85px
+                    width: 85px
+                    background: rgba(255, 255, 255, 0.5)
+                    border-radius: 50%
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    i
+                        color: white
+                        font-size: 1.85em
