@@ -9,7 +9,6 @@
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  height: 100vh;
   color: #212121;
   font-weight: 400;
 }
@@ -265,5 +264,24 @@ header, .sidebar {
   top: 2.5rem;
   text-transform: uppercase;
   font-family: 'Barlow Condensed', sans-serif;
+}
+
+.wrapper section {
+  width: calc(100vw - 70px);
+  float: right;
+}
+
+.wrapper section .logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: #f2f2f2;
+  padding: 3rem 0;
+}
+
+.wrapper section .logos .logo {
+  height: 70px;
 }
 /*# sourceMappingURL=style.css.map */
