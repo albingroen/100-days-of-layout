@@ -432,11 +432,29 @@ const Dashboard = ({ images }) => (
 
 export default class App extends Component {
   render() {
-    const design =
-      "https://dribbble.com/shots/6849239-Online-Course-Dashboard-Card-View-Data";
-
     return (
       <div className="wrapper">
+        <div class="design-label">
+          Designed by{" "}
+          <a
+            href="https://dribbble.com/shots/6849239-Online-Course-Dashboard-Card-View-Data"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @umarajipratama
+          </a>
+        </div>
+
+        <div class="code-label">
+          Coded by{" "}
+          <a
+            href="https://github.com/albingroen"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @albingroen
+          </a>
+        </div>
         <Navbar />
         <Sidebar />
         <Dashboard images={this.state.images} />
