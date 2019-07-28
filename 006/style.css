@@ -11,6 +11,8 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   color: #212121;
   font-weight: 400;
+  margin-bottom: 200px;
+  min-height: 100vh;
 }
 
 *:focus {
@@ -36,6 +38,7 @@ body {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  z-index: 2;
 }
 
 .design-label:hover,
@@ -67,6 +70,7 @@ header, .sidebar {
 }
 
 .sidebar .top-icons i {
+  cursor: pointer;
   height: 60px;
   width: 70px;
   display: -webkit-box;
@@ -80,6 +84,14 @@ header, .sidebar {
           align-items: center;
   font-size: 1.5em;
   border-bottom: 2px solid #e0e0e0;
+  -webkit-transition: .1s ease-in-out 0s;
+  transition: .1s ease-in-out 0s;
+}
+
+.sidebar .top-icons i:hover {
+  background: #f2e3de;
+  -webkit-transition: .1s ease-in-out 0s;
+  transition: .1s ease-in-out 0s;
 }
 
 .sidebar .top-icons i:last-child {
