@@ -8,3 +8,4 @@ This is a project were I will replicate 100 layout designs on Dribbble in code
 2. https://002.surge.sh -- Design by [@Mobiquity](https://dribbble.com/shots/6828777-Banking-Login)
 3. https://003.surge.sh -- Design by [@Nabilmahmud](https://dribbble.com/shots/6836081-Creative-agency-landing-page)
 4. https://004.surge.sh -- Design by [@Psdtowpservice](https://dribbble.com/shots/6839702-Minimal-Workspace-UI-Explore)
+5. https://005.surge.sh/ -- Design by [@umarajipratama](https://dribbble.com/shots/6849239-Online-Course-Dashboard-Card-View-Data)
