@@ -11,7 +11,11 @@ import {
   faHeadset,
   faCog,
   faSignOutAlt,
-  faEllipsisV
+  faEllipsisV,
+  faAngleDown,
+  faFilter,
+  faBars,
+  faThLarge
 } from "@fortawesome/free-solid-svg-icons";
 import profile_0 from "./assets/profiles/profile_0.jpg";
 import profile_3 from "./assets/profiles/profile_3.jpg";
@@ -333,11 +337,43 @@ const courses = [
   }
 ];
 
+const Filter = () => (
+  <div className="filter">
+    <div className="filter-dropdown-wrapper">
+      <button className="filter-dropdown-button">
+        <span>
+          Sort By: <span>All categories</span>
+        </span>
+        <i>
+          <FontAwesomeIcon icon={faAngleDown} />
+        </i>
+      </button>
+    </div>
+
+    <i className="filter-button">
+      <FontAwesomeIcon icon={faFilter} />
+    </i>
+
+    <div className="double-icons">
+      <i>
+        <FontAwesomeIcon icon={faBars} />
+      </i>
+      <i>
+        <FontAwesomeIcon icon={faThLarge} />
+      </i>
+    </div>
+  </div>
+);
+
 const Dashboard = ({ images }) => (
   <div className="dashboard">
-    <h2>
-      My courses for <span>"All Courses"</span>
-    </h2>
+    <header className="dashboard-header">
+      <h2>
+        My courses for <span>"All Courses"</span>
+      </h2>
+
+      <Filter />
+    </header>
 
     <div className="cards">
       {courses.map(course => (
