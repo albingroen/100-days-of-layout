@@ -157,7 +157,7 @@ const Card = ({ course }) => (
       <h4>{course.category}</h4>
       <p>{course.description}</p>
       <div className="range">
-        <div className="fill">
+        <div className="fill" style={{ width: `${course.range}%` }}>
           <div className="content" />
           <div className="point" />
         </div>
@@ -189,7 +189,8 @@ const courses = [
       name: "Brad Traversy",
       img: profile_0
     },
-    logo: angular
+    logo: angular,
+    range: 60
   },
   {
     title: "Codeigniter",
@@ -200,7 +201,8 @@ const courses = [
     author: {
       name: "InsideCode M"
     },
-    logo: codeigniter
+    logo: codeigniter,
+    range: 100
   },
   {
     title: "Laravel",
@@ -211,7 +213,8 @@ const courses = [
     author: {
       name: "JuanD MeGon"
     },
-    logo: laravel
+    logo: laravel,
+    range: 10
   },
   {
     title: "NodeJS",
@@ -223,7 +226,8 @@ const courses = [
       name: "Anthony Alicea",
       img: profile_3
     },
-    logo: node
+    logo: node,
+    range: 10
   },
   {
     title: "Sketch",
@@ -235,7 +239,8 @@ const courses = [
       name: "Joseph Angelo",
       img: profile_5
     },
-    logo: sketch
+    logo: sketch,
+    range: 55
   },
   {
     title: "Bootstrap",
@@ -246,7 +251,8 @@ const courses = [
     author: {
       name: "Janice Carroll"
     },
-    logo: bootstrap
+    logo: bootstrap,
+    range: 100
   },
   {
     title: "Firebase",
@@ -257,7 +263,8 @@ const courses = [
     author: {
       name: "Wayne Patel"
     },
-    logo: firebase
+    logo: firebase,
+    range: 100
   },
   {
     title: "Github",
@@ -269,7 +276,8 @@ const courses = [
       name: "Sara Perkins",
       img: profile_8
     },
-    logo: github
+    logo: github,
+    range: 80
   },
   {
     title: "HTML 5",
@@ -281,7 +289,8 @@ const courses = [
       name: "Brad Traversy",
       img: profile_0
     },
-    logo: html
+    logo: html,
+    range: 45
   },
   {
     title: "Principle",
@@ -293,7 +302,8 @@ const courses = [
       name: "Joshua Burton",
       img: profile_9
     },
-    logo: principle
+    logo: principle,
+    range: 90
   },
   {
     title: "ReactJS",
@@ -305,7 +315,8 @@ const courses = [
       name: "Debra Oliver",
       img: profile_10
     },
-    logo: react
+    logo: react,
+    range: 60
   },
   {
     title: "YII Framework",
@@ -317,7 +328,8 @@ const courses = [
       name: "Deborah Pena",
       img: profile_11
     },
-    logo: yii
+    logo: yii,
+    range: 90
   }
 ];
 
