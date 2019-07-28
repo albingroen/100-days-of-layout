@@ -15,7 +15,9 @@ import {
   faAngleDown,
   faFilter,
   faBars,
-  faThLarge
+  faThLarge,
+  faSearch,
+  faBell
 } from "@fortawesome/free-solid-svg-icons";
 import profile_0 from "./assets/profiles/profile_0.jpg";
 import profile_3 from "./assets/profiles/profile_3.jpg";
@@ -37,6 +39,7 @@ import principle from "./assets/logos/principle.png";
 import react from "./assets/logos/react.png";
 import sketch from "./assets/logos/sketch.png";
 import yii from "./assets/logos/yii.png";
+import user_img from "./assets/profile.jpg";
 
 const sideBarItems = [
   {
@@ -83,7 +86,7 @@ const sideBarItemsBottom = [
 const Sidebar = () => (
   <div class="sidebar">
     <header>
-      <div className="logo" />
+      <img className="logo" src="./assets/logo.png" />
       <h3>E-Studieses</h3>
     </header>
 
@@ -119,68 +122,91 @@ const states = [
   {
     value: "Ongoing",
     background: "#ebf9fb",
-    color: "#00c1ce"
+    color: "#00c1ce",
+    button: "Continue"
   },
   {
     value: "Paused",
     background: "#fff4f3",
-    color: "#ff7867"
+    color: "#ff7867",
+    button: "Continue"
   },
   {
     value: "Done",
     background: "#effaf5",
-    color: "#4fd3a0"
+    color: "#4fd3a0",
+    button: "Claim Reward"
   }
 ];
 
-const Card = ({ course }) => (
-  <div className="card">
-    <header>
-      <div className="left">
-        <img src={course.logo} alt="" className="icon" />
-        <h3>{course.title}</h3>
-        <div>__</div>
-      </div>
-      <div className="right">
-        <div
-          className="tag"
+const Card = ({ course }) => {
+  const getInitials = name => {
+    const { length } = name;
+    const letters = name.split("");
+
+    const first = letters[0];
+    const last = letters[length - 1];
+
+    return `${first}${last}`;
+  };
+
+  return (
+    <div className="card">
+      <header>
+        <div className="left">
+          <img src={course.logo} alt="" className="icon" />
+          <h3>{course.title}</h3>
+          <div>__</div>
+        </div>
+        <div className="right">
+          <div
+            className="tag"
+            style={{
+              background: states[course.state - 1].background,
+              color: states[course.state - 1].color
+            }}
+          >
+            {states[course.state - 1].value}
+          </div>
+
+          <i>
+            <FontAwesomeIcon icon={faEllipsisV} />
+          </i>
+        </div>
+      </header>
+      <section>
+        <h4>{course.category}</h4>
+        <p>{course.description}</p>
+        <div className="range">
+          <div className="fill" style={{ width: `${course.range}%` }}>
+            <div className="content" />
+            <div className="point" />
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div className="author">
+          <div
+            className="profile"
+            style={{
+              backgroundImage: `url(${course.author.img})`
+            }}
+          >
+            {!course.author.img && <h4>{getInitials(course.author.name)}</h4>}
+          </div>
+          <span>{course.author.name}</span>
+        </div>
+        <button
           style={{
-            background: states[course.state - 1].background,
             color: states[course.state - 1].color
           }}
         >
-          {states[course.state - 1].value}
-        </div>
-
-        <i>
-          <FontAwesomeIcon icon={faEllipsisV} />
-        </i>
-      </div>
-    </header>
-    <section>
-      <h4>{course.category}</h4>
-      <p>{course.description}</p>
-      <div className="range">
-        <div className="fill" style={{ width: `${course.range}%` }}>
-          <div className="content" />
-          <div className="point" />
-        </div>
-      </div>
-    </section>
-    <footer>
-      <div className="author">
-        <div
-          className="profile"
-          style={{
-            backgroundImage: `url(${course.author.img})`
-          }}
-        />
-        <span>{course.author.name}</span>
-      </div>
-      <button>Continue</button>
-    </footer>
-  </div>
-);
+          {states[course.state - 1].button}
+        </button>
+      </footer>
+    </div>
+  );
+};
 
 const courses = [
   {
@@ -365,6 +391,27 @@ const Filter = () => (
   </div>
 );
 
+const Navbar = () => (
+  <nav className="main-nav">
+    <i className="hamburger">
+      <FontAwesomeIcon icon={faBars} />
+    </i>
+    <div className="input-wrapper">
+      <i>
+        <FontAwesomeIcon icon={faSearch} />
+      </i>
+      <input type="text" placeholder="Quick Search..." />
+    </div>
+    <div className="user">
+      <i>
+        <FontAwesomeIcon icon={faBell} />
+      </i>
+      <div className="avatar" style={{ backgroundImage: `url(${user_img})` }} />
+      <h3>Sergio Roberto</h3>
+    </div>
+  </nav>
+);
+
 const Dashboard = ({ images }) => (
   <div className="dashboard">
     <header className="dashboard-header">
@@ -390,6 +437,7 @@ export default class App extends Component {
 
     return (
       <div className="wrapper">
+        <Navbar />
         <Sidebar />
         <Dashboard images={this.state.images} />
       </div>

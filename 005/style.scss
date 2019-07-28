@@ -14,6 +14,7 @@ body {
     font-weight: 400;
     height: 100vh;
     background: #f8fafd;
+    color: #0b1e37;
 }
 
 *:focus {
@@ -29,7 +30,8 @@ body {
         color: white;
         width: 300px;
         max-height: 100vh;
-        overflow-y: auto;
+        overflow-y: hidden;
+        z-index: 11;
 
         header {
             display: flex;
@@ -38,9 +40,9 @@ body {
 
             .logo {
                 height: 30px;
-                width: 30px;
-                background: #00c2ce;
+                width: 32px;
                 margin-right: 1rem;
+                margin-left: -2px;
             }
 
             h3 {
@@ -96,11 +98,75 @@ body {
         }
     }
 
+    .main-nav {
+        box-shadow: 0 0px 15px 0 lighten(#ede9fd, 1%);
+        position: fixed;
+        top: 0;
+        width: calc(100vw - 300px);
+        right: 0;
+        z-index: 10;
+        display: flex;
+        background: white;
+        padding: 1.5rem;
+        align-items: center;
+
+        .hamburger {
+            font-size: 1.75em;
+            color: #5161c4;
+        }
+
+        .input-wrapper {
+            flex-grow: 100;
+            position: relative;
+            margin: 0 3rem;
+
+            i {
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                color: #d5d9f0;
+                font-size: 1.5em;
+            }
+
+            input {
+                width: 100%;
+                border: none;
+                padding-left: 3rem;
+                font-size: 1.1em;
+
+                &::placeholder {
+                    color: #d5d9f0;
+                }
+            }
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+
+            .avatar {
+                margin-right: .75rem;
+                margin-left: 1.5rem;
+                height: 32px;
+                width: 32px;
+                border-radius: 50%;
+                background-position: center;
+                background-size: cover;
+            }
+
+            h3 {
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+
     .dashboard {
         width: calc(100vw - 300px);
         padding: 2rem;
         max-height: 100vh;
         overflow-y: auto;
+        padding-top: 9rem;
 
         .dashboard-header {
             display: flex;
@@ -322,13 +388,24 @@ body {
                         align-items: center;
 
                         .profile {
-                            background: lavender;
+                            background: #ebf9fb;
                             height: 30px;
                             width: 30px;
                             border-radius: 50%;
                             margin-right: 0.75rem;
                             background-position: center;
                             background-size: cover;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-transform: uppercase;
+
+                            h4 {
+                                color: #00c4d0;
+                                font-size: 0.9em;
+                                font-weight: 400;
+                                letter-spacing: 0.5px;
+                            }
                         }
                     }
 
