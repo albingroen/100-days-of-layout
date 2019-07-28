@@ -21,6 +21,19 @@ import profile_9 from "./assets/profiles/profile_9.jpg";
 import profile_10 from "./assets/profiles/profile_10.jpg";
 import profile_11 from "./assets/profiles/profile_11.jpg";
 
+import angular from "./assets/logos/angular.svg";
+import bootstrap from "./assets/logos/bootstrap.png";
+import codeigniter from "./assets/logos/codeigniter.png";
+import firebase from "./assets/logos/firebase.png";
+import github from "./assets/logos/github.png";
+import html from "./assets/logos/html.png";
+import laravel from "./assets/logos/laravel.png";
+import node from "./assets/logos/node.png";
+import principle from "./assets/logos/principle.png";
+import react from "./assets/logos/react.png";
+import sketch from "./assets/logos/sketch.png";
+import yii from "./assets/logos/yii.png";
+
 const sideBarItems = [
   {
     value: "Dashboard",
@@ -120,7 +133,7 @@ const Card = ({ course }) => (
   <div className="card">
     <header>
       <div className="left">
-        <div className="icon" />
+        <img src={course.logo} alt="" className="icon" />
         <h3>{course.title}</h3>
         <div>__</div>
       </div>
@@ -170,7 +183,8 @@ const courses = [
     author: {
       name: "Brad Traversy",
       img: profile_0
-    }
+    },
+    logo: angular
   },
   {
     title: "Codeigniter",
@@ -180,7 +194,8 @@ const courses = [
       "Learn Php Codeigniter and understand working with MVC and HMVC from zero to hero",
     author: {
       name: "InsideCode M"
-    }
+    },
+    logo: codeigniter
   },
   {
     title: "Laravel",
@@ -190,7 +205,8 @@ const courses = [
       "Build a RESTful API for a market system using Laravel and dominates the challenging RESTful skills",
     author: {
       name: "JuanD MeGon"
-    }
+    },
+    logo: laravel
   },
   {
     title: "NodeJS",
@@ -201,18 +217,8 @@ const courses = [
     author: {
       name: "Anthony Alicea",
       img: profile_3
-    }
-  },
-  {
-    title: "AngularJS",
-    state: 1,
-    category: "Frontend development",
-    description:
-      "Master Angular 5 from the basics to building an advanced application with Firebase´s Firestore as well...",
-    author: {
-      name: "Brad Traversy",
-      img: profile_0
-    }
+    },
+    logo: node
   },
   {
     title: "Sketch",
@@ -223,7 +229,8 @@ const courses = [
     author: {
       name: "Joseph Angelo",
       img: profile_5
-    }
+    },
+    logo: sketch
   },
   {
     title: "Bootstrap",
@@ -233,7 +240,8 @@ const courses = [
       "This tutorial has been prepared for anyone who has a basic knowledge of HTML and CSS to develop websites.",
     author: {
       name: "Janice Carroll"
-    }
+    },
+    logo: bootstrap
   },
   {
     title: "Firebase",
@@ -243,7 +251,8 @@ const courses = [
       "Full-stack Development with Angular 8, Firestore, Firebase Storage&Hosting. Firebase Cloud Functions..",
     author: {
       name: "Wayne Patel"
-    }
+    },
+    logo: firebase
   },
   {
     title: "Github",
@@ -254,7 +263,20 @@ const courses = [
     author: {
       name: "Sara Perkins",
       img: profile_8
-    }
+    },
+    logo: github
+  },
+  {
+    title: "HTML 5",
+    state: 2,
+    category: "Web Design",
+    description:
+      "This tutorial has been prepared for anyone to know the basic knowledge of HTML5 to develop websites.",
+    author: {
+      name: "Brad Traversy",
+      img: profile_0
+    },
+    logo: html
   },
   {
     title: "Principle",
@@ -265,7 +287,8 @@ const courses = [
     author: {
       name: "Joshua Burton",
       img: profile_9
-    }
+    },
+    logo: principle
   },
   {
     title: "ReactJS",
@@ -276,7 +299,8 @@ const courses = [
     author: {
       name: "Debra Oliver",
       img: profile_10
-    }
+    },
+    logo: react
   },
   {
     title: "YII Framework",
@@ -287,7 +311,8 @@ const courses = [
     author: {
       name: "Deborah Pena",
       img: profile_11
-    }
+    },
+    logo: yii
   }
 ];
 
