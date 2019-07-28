@@ -156,8 +156,13 @@ const Card = ({ course }) => (
     <section>
       <h4>{course.category}</h4>
       <p>{course.description}</p>
+      <div className="range">
+        <div className="fill">
+          <div className="content" />
+          <div className="point" />
+        </div>
+      </div>
     </section>
-    <hr />
     <footer>
       <div className="author">
         <div
