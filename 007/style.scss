@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:700,900|Rubik&display=swap");
+
+@mixin trans {
+    transition: .1s ease-in-out 0s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    color: #212121;
+    font-weight: 400;
+    margin-bottom: 200px;
+    min-height: 100vh;
+}
+
+*:focus {
+    outline: none;
+}
+
+.design-label,
+.code-label {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    min-width: 220px;
+    background: #333;
+    border-radius: 5px;
+    padding: 0.85rem;
+    color: white;
+    font-size: 1em;
+    text-align: left;
+    opacity: 0.5;
+    transition: 0.1s ease-in-out 0s;
+    user-select: none;
+    z-index: 2;
+
+    &:hover {
+        opacity: 1;
+        transition: 0.1s ease-in-out 0s;
+    }
+
+    a {
+        color: pink;
+    }
+}
+
+.code-label {
+    bottom: 6rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2.5rem;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    img {
+        max-width: 300px;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            list-style: none;
+            font-size: 1em;
+            margin: 0 1.5rem;
+            font-weight: bolder;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        button {
+            background: #fef12f;
+            padding: 1rem 2rem;
+            border: none;
+            font-size: .9em;
+            font-weight: 600;
+            cursor: pointer;
+
+            @include trans;
+
+            &:hover {
+                background: darken(#fef12f, 10%);
+
+                @include trans;
+            }
+        }
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto;
+    padding: 0 2.5rem;
+    min-height: 600px;
+    max-width: 1600px;
+    margin: 0 auto;
+
+    .left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 600px;
+        left: 50%;
+
+        h1 {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 700;
+            font-size: 4.5em;
+        }
+
+        p {
+            opacity: .6;
+            font-size: 1.15em;
+            line-height: 170%;
+            margin: 2rem 0;
+            max-width: 600px;
+        }
+
+        button {
+            background: #000000;
+            color: white;
+            text-transform: capitalize;
+            padding: 1rem 3rem;
+            border: none;
+            font-size: 1em;
+            cursor: pointer;
+            border: 1px solid #000000;
+
+            @include trans;
+
+            &:hover {
+                background: none;
+
+                @include trans;
+
+                color: #000000;
+            }
+        }
+    }
+
+    .placeholder-block {
+        width: 100%;
+        max-width: 700px;
+        min-height: 600px;
+    }
+
+    img {
+        width: 100%;
+        max-width: 700px;
+        top: 17%;
+        position: absolute;
+        right: 0;
+    }
+}
