@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Playfair+Display:400,700,900&display=swap");
+
+@mixin trans {
+    transition: .1s ease-in-out 0s;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    color: #212121;
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+*:focus {
+    outline: none;
+}
+
+.design-label,
+.code-label {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    min-width: 220px;
+    background: #333;
+    border-radius: 5px;
+    padding: 0.85rem;
+    color: white;
+    font-size: 1em;
+    text-align: left;
+    opacity: 0.5;
+    transition: 0.1s ease-in-out 0s;
+    user-select: none;
+    z-index: 2;
+
+    &:hover {
+        opacity: 1;
+        transition: 0.1s ease-in-out 0s;
+    }
+
+    a {
+        color: pink;
+    }
+}
+
+.code-label {
+    bottom: 6rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+    border: 1rem solid white;
+
+    .left {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 5em;
+            color: #3d5174;
+            font-family: "Abril Fatface", sans-serif;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 120%;
+            max-width: 700px;
+        }
+
+        p {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 180%;
+            padding: 2rem 0;
+            font-size: 1.2em;
+            color: #8d99ae;
+        }
+
+        .video-button {
+            background: none;
+            border: none;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+            margin-top: 4rem;
+
+            i {
+                color: white;
+                background: #ff7d64;
+                border-radius: 18.5px;
+                height: 52px;
+                width: 52px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.75em;
+            }
+
+            span {
+                margin-left: 1.35rem;
+                font-weight: 300;
+                letter-spacing: .5px;
+                color: #ff7d64;
+                padding-bottom: 2px;
+                border-bottom: 1px solid #ff7d64;
+            }
+        }
+    }
+
+    .right {
+        background-image: url("./assets/banner.png");
+        background-position: center;
+        background-size: contain;
+        width: 50%;
+    }
+}
+
+.video-button-large {
+    i {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 90px !important;
+        width: 90px !important;
+        font-size: 1.2em !important;
+        border-radius: 35px !important;
+        border: 4px solid white;
+    }
+}
