@@ -13,3 +13,4 @@ This is a project were I will replicate 100 layout designs on Dribbble in code
 7. https://00-7.surge.sh/ -- Design by [@evrenkarsit](https://dribbble.com/shots/6857332-Ad-Management-Header-Concept-Yellow-Mind)
 8. https://008.surge.sh/ -- Design by [@FantasyU2580](https://dribbble.com/shots/6861201-House-illustrations-2)
 9. https://009.surge.sh/ -- Design by [@geneross](https://dribbble.com/shots/6792991-Cruise-Careers)
+10. https://010.surge.sh/ -- Design by [@haydenbleasel](https://dribbble.com/shots/6796008-DailyUI-035-Blog-Post/)
