@@ -78,7 +78,7 @@ p {
 
 .wrapper .left {
   height: 100%;
-  width: 50%;
+  width: 55%;
   background: lightgray;
   background-image: url("./assets/setup.jpg");
   background-position: center;
@@ -87,7 +87,7 @@ p {
 
 .wrapper .right {
   height: 100%;
-  width: 50%;
+  width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,5 +151,32 @@ p {
   bottom: 5rem;
   width: 100%;
   max-width: 500px;
+}
+
+.wrapper .right footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  max-width: 500px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .right footer .icons i {
+  margin: 0 1rem;
+  font-size: 1.5em;
+  cursor: pointer;
+  opacity: 0.75;
+  -webkit-transition: .1s ease-in-out 0s;
+  transition: .1s ease-in-out 0s;
+}
+
+.wrapper .right footer .icons i:hover {
+  opacity: 1;
+  -webkit-transition: .1s ease-in-out 0s;
+  transition: .1s ease-in-out 0s;
 }
 /*# sourceMappingURL=style.css.map */
