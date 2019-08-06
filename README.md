@@ -15,3 +15,4 @@ This is a project were I will replicate 100 layout designs on Dribbble in code
 9. https://009.surge.sh/ -- Design by [@geneross](https://dribbble.com/shots/6792991-Cruise-Careers)
 10. https://010.surge.sh/ -- Design by [@haydenbleasel](https://dribbble.com/shots/6796008-DailyUI-035-Blog-Post/)
 11. https://011.surge.sh/ -- Design by [@alexdixon](https://dribbble.com/shots/4908970-Minimal-Holding-Page)
+12. https://012.surge.sh/ -- Design by [@anastasiiak90](https://dribbble.com/shots/6919869-Model-Agency-Website-Concept)
