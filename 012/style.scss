@@ -64,6 +64,7 @@ body {
     height: 100%;
     width: 50%;
     padding: 10rem;
+    position: relative;
 
     .title {
       position: relative;
@@ -145,6 +146,41 @@ body {
           color: white;
           @include trans();
         }
+      }
+    }
+
+    .next-images {
+      bottom: 0;
+      left: 10rem;
+      position: absolute;
+      display: flex;
+
+      .image-one,
+      .image-two {
+        background-position: top;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+      }
+
+      .image-one-wrapper {
+        h4 {
+          height: 40px;
+          font-family: "Playfair Display", serif;
+          color: #465365;
+          letter-spacing: 0.5px;
+          font-size: 0.95em;
+        }
+
+        .image-one {
+          background-image: url("./assets/model-2.jpg");
+          margin-right: 2rem;
+          height: 160px;
+        }
+      }
+
+      .image-two {
+        background-image: url("./assets/model-3.jpg");
       }
     }
   }
