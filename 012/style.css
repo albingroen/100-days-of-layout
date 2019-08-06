@@ -222,5 +222,47 @@ body {
   background-image: url("./assets/model.jpg");
   background-position: center;
   background-size: cover;
+  -webkit-transition: 0.1s ease-in-out 0s;
+  transition: 0.1s ease-in-out 0s;
+}
+
+.wrapper .right .image:hover {
+  -webkit-transform: translate(-4rem, -50%) scale(1.05);
+          transform: translate(-4rem, -50%) scale(1.05);
+  -webkit-transition: 0.1s ease-in-out 0s;
+  transition: 0.1s ease-in-out 0s;
+}
+
+.wrapper .right .icons {
+  position: absolute;
+  right: 3rem;
+  bottom: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .right .icons .icon {
+  border-radius: 50%;
+  background: #eb7947;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  width: 50px;
+  height: 50px;
+  margin-top: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
