@@ -20,7 +20,7 @@
     "eslint": "^4.5.0",
     "eslint-config-synacor": "^1.1.0",
     "if-env": "^1.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "preact-cli": "^2.0.0",
     "sass-loader": "^7.1.0"
   },
