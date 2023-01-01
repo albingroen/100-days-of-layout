@@ -21,8 +21,8 @@
     "eslint-config-synacor": "^1.1.0",
     "if-env": "^1.0.0",
     "node-sass": "^4.12.0",
-    "preact-cli": "^2.0.0",
-    "sass-loader": "^7.1.0"
+    "preact-cli": "^3.4.3",
+    "sass-loader": "^13.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
